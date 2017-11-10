@@ -15,6 +15,13 @@ var rootRef = firebase.database().ref();
 // Reference message collection
 var orderRef = firebase.database().ref('order')
 
+// Get today's date
+var d = new Date()
+var month = d.getMonth() + 1
+var date = d.getDate()
+var openDate = month + "/" + date
+
+
 // Listen fro form submit
 document.getElementById('orderForm').addEventListener('submit', submitForm);
 
@@ -26,22 +33,28 @@ function submitForm(e) {
 	var total = document.getElementById('total').value
 	console.log(total)
 
-	// save message
-	saveOrder(total)
+	// save order
+	saveOrder(total,openDate)
+
+	// reset form
+	document.getElementById('orderForm').reset()
 }
 
 // Save message to firebase
-function saveOrder(total){
+function saveOrder(total,openDate){
 	var newOrderRef = orderRef.push()
 	newOrderRef.set({
+		date:openDate,
 		total:total
 	})
 }
 
 
-
-var d = new Date()
-var month = d.getMonth() + 1
-var date = d.getDate()
-var openDate = month + "/" + date
-console.log(openDate)
+var query = firebase.database().ref('order').orderByKey()
+query.once('value')
+	.then(function(snapshot){
+		snapshot.forEach(function(childSnapshot){
+			var childData = childSnapshot.val()
+			// console.log(childData)
+		})
+	})

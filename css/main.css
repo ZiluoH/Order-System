@@ -1,1 +1,22 @@
-*
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+}
+
+.tabLeft{
+	float: left;
+	height: 768px;
+	width: 80%;
+	background-color: yellow;
+}
+
+.tabRight{
+	float: right;
+	height: 768px;
+	width: 20%;
+	background-color: blue;
+}
