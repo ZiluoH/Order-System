@@ -19,8 +19,32 @@
 
     <div class="mainDiv">
         <form id="orderForm">
-            <div class="tabLeft"></div>
-            <div class="tabRight"></div>
+            <div id="tabLeft" class="container">
+                <!-- nav tag list -->
+                <ul class="nav nav-pills">                    
+                    <li class="active"><a href="#make_drinks" data-toggle="tab">Make Drinks</a></li>
+                    <li><a href="#special_drinks" data-toggle="tab">Special Drinks</a></li>
+                    <li><a href="#smoothies" data-toggle="tab">Smoothies</a></li>
+                    <li><a href="#yogurt_snacks" data-toggle="tab">Yogurt &amp; Snacks</a></li>
+                </ul>
+
+                <!-- tab detail(item list) -->
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="make_drinks">
+                        <p>wonder tea make drinks</p>
+                    </div>
+                    <div class="tab-pane" id="special_drinks">
+                        <p>wonder tea special drinks</p>
+                    </div>
+                    <div class="tab-pane" id="smoothies">
+                        <p>wonder tea smoothies</p>
+                    </div>
+                    <div class="tab-pane" id="yogurt_snacks">
+                        <p>wonder tea yogurt snacks</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tabRight"></div>
             <p>
                 <label>Total</label>
                 <input type="number" name="total" id="total">
