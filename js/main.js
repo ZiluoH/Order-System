@@ -61,11 +61,7 @@ query.once('value')
 
 
 
-// JS for frontend
-function addItem() {
-	var fff = document.querySelector('input[name="size"]:checked').value;
-	console.log(fff)
-}
+
 
 // function for topping
 var toppingArray = []
@@ -75,18 +71,18 @@ function topping(type,price) {
 	toppingArray.push(this)
 }
 
-var boba = new topping('Boba', 0)
-var grassjelly = new topping('Grass Jelly', 0.5)
-var rainbowjelly = new topping('Rainbow Jelly', 0.5)
-var lycheejelly = new topping('Lychee Jelly', 0.5)
-var greenapplejelly = new topping('Greenapple Jelly', 0.5)
-var mangojelly = new topping('Mango Jelly', 0.5)
-var pineapplejelly = new topping('Pineapple Jelly', 0.5)
-var basilseeds = new topping('Basil Seeds', 0.5)
-var eggpudding = new topping('Egg Pudding', 0.5)
-var aloevera = new topping('Aloe Vera', 0.5)
-var redbean = new topping('Red Bean', 0.5)
 var poppingboba = new topping('Popping Boba(lychee)', 0.5)
+var redbean = new topping('Red Bean', 0.5)
+var aloevera = new topping('Aloe Vera', 0.5)
+var eggpudding = new topping('Egg Pudding', 0.5)
+var basilseeds = new topping('Basil Seeds', 0.5)
+var pineapplejelly = new topping('Pineapple Jelly', 0.5)
+var mangojelly = new topping('Mango Jelly', 0.5)
+var greenapplejelly = new topping('Greenapple Jelly', 0.5)
+var lycheejelly = new topping('Lychee Jelly', 0.5)
+var rainbowjelly = new topping('Rainbow Jelly', 0.5)
+var grassjelly = new topping('Grass Jelly', 0.5)
+var boba = new topping('Boba', 0)
 
 for (var i = toppingArray.length - 1; i >= 0; i--) {
 	var toppingLabel = document.createElement('label')
@@ -98,8 +94,37 @@ for (var i = toppingArray.length - 1; i >= 0; i--) {
 	toppingInput.type = 'checkbox'
 	toppingInput.name = 'topping'
 	toppingInput.value = toppingArray[i].type
+	toppingInput.setAttribute('price', toppingArray[i].price)
 
 	toppingLabel.appendChild(toppingInput)
 
 	document.getElementById('make_drinks_topping').appendChild(toppingLabel)
+}
+
+
+
+// JS for frontend
+function addItem() {
+	// get size
+	var make_drinks_size = document.querySelector('input[name="size"]:checked').value;
+	// get tea base
+	var make_drinks_tea_base = document.querySelector('input[name="tea_base"]:checked').value;
+	// get flavor
+	var make_drinks_flavor = document.querySelector('input[name="flavor"]:checked').value;
+	// get topping price
+	var make_drinks_topping_price = []
+	$('input:checkbox[name="topping"]:checked').each(function(){
+		make_drinks_topping_price.push($(this).attr("price"));
+	})
+	// get topping type
+	var make_drinks_topping_type = []
+	$('input:checkbox[name="topping"]:checked').each(function(){
+		make_drinks_topping_type.push($(this).val());
+	})
+
+
+	//make drinks
+	var make_drinks_final = make_drinks_size + make_drinks_tea_base + make_drinks_flavor + make_drinks_topping_type 
+	console.log(make_drinks_final)
+ 	
 }
