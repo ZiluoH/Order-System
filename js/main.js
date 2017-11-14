@@ -71,9 +71,9 @@ function topping(type,price) {
 	toppingArray.push(this)
 }
 
-var poppingboba = new topping('Popping Boba(lychee)', 0.5)
-var redbean = new topping('Red Bean', 0.5)
-var aloevera = new topping('Aloe Vera', 0.5)
+var poppingboba = new topping('Popping Boba(lychee)', 0.6)
+var redbean = new topping('Red Bean', 0.6)
+var aloevera = new topping('Aloe Vera', 0.6)
 var eggpudding = new topping('Egg Pudding', 0.5)
 var basilseeds = new topping('Basil Seeds', 0.5)
 var pineapplejelly = new topping('Pineapple Jelly', 0.5)
@@ -116,15 +116,27 @@ function addItem() {
 	$('input:checkbox[name="topping"]:checked').each(function(){
 		make_drinks_topping_price.push($(this).attr("price"));
 	})
+	var make_drinks_topping_total_price = make_drinks_topping_price.map(Number).reduce(add, 0).toFixed(2)
 	// get topping type
 	var make_drinks_topping_type = []
 	$('input:checkbox[name="topping"]:checked').each(function(){
 		make_drinks_topping_type.push($(this).val());
 	})
-
-
+	// get sweet level
+	var make_drinks_sweet = document.querySelector('input[name="sweet_level"]:checked').value;
+	// get ice level
+	var make_drinks_ice = document.querySelector('input[name="ice_level"]:checked').value
 	//make drinks
-	var make_drinks_final = make_drinks_size + make_drinks_tea_base + make_drinks_flavor + make_drinks_topping_type 
-	console.log(make_drinks_final)
+	var make_drinks_final = make_drinks_size + make_drinks_tea_base + make_drinks_flavor + 
+			make_drinks_topping_type + make_drinks_sweet + make_drinks_ice
+
+	
+	
+	
+	console.log(make_drinks_topping_total_price)
  	
+}
+
+function add(a, b){
+	return a + b;
 }
