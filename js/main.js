@@ -71,6 +71,7 @@ function topping(type,price) {
 	toppingArray.push(this)
 }
 
+var notopping = new topping('No topping', 0)
 var poppingboba = new topping('Popping Boba(lychee)', 0.6)
 var redbean = new topping('Red Bean', 0.6)
 var aloevera = new topping('Aloe Vera', 0.6)
@@ -83,6 +84,7 @@ var lycheejelly = new topping('Lychee Jelly', 0.5)
 var rainbowjelly = new topping('Rainbow Jelly', 0.5)
 var grassjelly = new topping('Grass Jelly', 0.5)
 var boba = new topping('Boba', 0)
+
 
 for (var i = toppingArray.length - 1; i >= 0; i--) {
 	var toppingLabel = document.createElement('label')
@@ -127,13 +129,14 @@ function addItem() {
 	// get ice level
 	var make_drinks_ice = document.querySelector('input[name="ice_level"]:checked').value
 	//make drinks
-	var make_drinks_final = make_drinks_size + make_drinks_tea_base + make_drinks_flavor + 
-			make_drinks_topping_type + make_drinks_sweet + make_drinks_ice
-
-	
-	
+	var make_drinks_final = make_drinks_size + " " + make_drinks_tea_base + " " + make_drinks_flavor + " flavor with " + 
+			make_drinks_topping_type + " " +  make_drinks_sweet + " sweet and " + make_drinks_ice	
 	
 	console.log(make_drinks_topping_total_price)
+
+	// add drinks
+	var items_list = document.getElementById('items_list')
+	items_list.innerHTML += '<li class="list-group-item">' + make_drinks_final + '</li>';
  	
 }
 

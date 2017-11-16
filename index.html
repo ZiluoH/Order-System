@@ -36,11 +36,11 @@
                         <div class="row">
                             <!-- drink size -->
                             <div class="make_drinks_size col-sm-2" data-toggle="buttons">
-                                <label class="btn btn-primary active">
+                                <label class="btn btn-default active">
                                     <input type="radio" name="size" value="Regular" checked="checked">
                                     Regular
                                 </label>                                
-                                <label class="btn btn-primary">
+                                <label class="btn btn-default">
                                     <input type="radio" name="size" value="Large">
                                     Large
                                 </label>
@@ -91,8 +91,8 @@
                         </div>
                         <!-- sweetness level -->
                         <div class="make_drinks_sweet" data-toggle="buttons">
-                            <label class="btn btn-primary active"><input type="radio" name="sweet_level" checked="checked" value="Regular">Regular</label>
                             <label class="btn btn-primary"><input type="radio" name="sweet_level" value="Extra">Extra</label>
+                            <label class="btn btn-primary active"><input type="radio" name="sweet_level" checked="checked" value="Regular">Regular</label>                    
                             <label class="btn btn-primary"><input type="radio" name="sweet_level" value="75%">75&#37;</label>
                             <label class="btn btn-primary"><input type="radio" name="sweet_level" value="50%">50&#37;</label>
                             <label class="btn btn-primary"><input type="radio" name="sweet_level" value="25%">25&#37;</label>
@@ -100,12 +100,13 @@
                         </div>
                         <!-- ice level -->
                         <div class="make_drinks_ice" data-toggle="buttons">
-                            <label class="btn btn-primary active"><input type="radio" name="ice_level" value="Extra Ice" checked="checked">Extra Ice</label>
-                            <label class="btn btn-primary"><input type="radio" name="ice_level" value="Regular Ice">Regular Ice</label>
+                            <label class="btn btn-primary"><input type="radio" name="ice_level" value="Extra Ice">Extra Ice</label>
+                            <label class="btn btn-primary active"><input type="radio" name="ice_level" value="Regular Ice" checked="checked">Regular Ice</label>
                             <label class="btn btn-primary"><input type="radio" name="ice_level" value="Less Ice">Less Ice</label>
-                            <label class="btn btn-primary"><input type="radio" name="ice_level" value="No Ice">No Ice</label>
-
+                            <label class="btn btn-primary"><input type="radio" name="ice_level" value="No Ice">No Ice</label>                
                         </div>
+                        <!-- add make drinks -->
+                        <button type="button" onclick="addItem()">Add Item</button>
                     </div>
                     <!-- tab for "Special Drinks" -->
                     <div class="tab-pane" id="special_drinks">
@@ -121,8 +122,9 @@
                     </div>
                 </div>
             </div>
+            <!-- right side content -->
             <div id="tabRight">
-                <button type="button" onclick="addItem()">Add Item</button>
+                <ul id="items_list"></ul>
             </div>
             <p>
                 <label>Total</label>

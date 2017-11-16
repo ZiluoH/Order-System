@@ -24,15 +24,40 @@ body{
 #tabLeft .nav-pills>li.active>a:focus, 
 #tabLeft .nav-pills>li.active>a:hover{
 	/*tab color*/
-	background-color: #428bca;
+	/*background-color: #428bca;*/
+	background-color: black;
 } 
 
-
-
 #tabLeft .tab-content{
-	color: white;
-	background-color: #428bca;
+	/*color: white;*/
+	/*background-color: #428bca;*/
+	background-color: black;
 }
+
+.make_drinks_size label{
+	width: 98px;
+}
+
+.make_drinks_tea_base label{
+	width: 145px;
+}
+
+.make_drinks_flavor label{
+	width: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*right side css*/
 
@@ -40,5 +65,5 @@ body{
 	float: right;
 	height: 768px;
 	width: 25%;
-	background-color: blue;
+	/*background-color: blue;*/
 }
