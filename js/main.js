@@ -89,7 +89,7 @@ for (var i = toppingArray.length - 1; i >= 0; i--) {
 	var toppingLabel = document.createElement('label')
 	var toppingInput = document.createElement('input')
 
-	toppingLabel.className = 'btn btn-primary'
+	toppingLabel.className = 'btn btn-info'
   toppingLabel.innerHTML = toppingArray[i].type
 
 	toppingInput.type = 'checkbox'
