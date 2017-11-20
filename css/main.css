@@ -14,28 +14,29 @@ body{
 	height: 768px;
 	width: 75%;
 	padding:0;
-	background-color: #EEEEEE;
+	background-color: #F6F6F6;
 }
 
 #tabLeft ul{
-	background-color: #393E46;
+	background-color: #A0DBDB;
 }
 
 #tabLeft .nav-pills li a{
 	border-radius: 4px 4px 0 0;
+	width: 183px;
 }
 
 #tabLeft .nav-pills>li.active>a, 
 #tabLeft .nav-pills>li.active>a:focus, 
 #tabLeft .nav-pills>li.active>a:hover{
 	/*tab color*/
-	
-	background-color: #EEEEEE;
-	color: #222831;
+	/*background-color: #428bca;*/
+	background-color: #56A7A7;
 } 
 
 #tabLeft .tab-content{
-	/*color: white;*/
+	/*background-color: #56A7A7;*/
+	height: 700px;
 }
 
 .make_drinks_size label{
