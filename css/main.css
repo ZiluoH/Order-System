@@ -14,42 +14,74 @@ body{
 	height: 768px;
 	width: 75%;
 	padding:0;
-	background-color: #F6F6F6;
+	background-color: #EEEEEE;
 }
 
 #tabLeft ul{
-	background-color: #A0DBDB;
+	background-color: #393E46;
+	padding-top: 15px;
 }
 
 #tabLeft .nav-pills li a{
 	border-radius: 4px 4px 0 0;
-	width: 183px;
+	width: 170px;
+	text-align: center;
+	color: #FFFFFF;
 }
 
 #tabLeft .nav-pills>li.active>a, 
 #tabLeft .nav-pills>li.active>a:focus, 
 #tabLeft .nav-pills>li.active>a:hover{
 	/*tab color*/
-	/*background-color: #428bca;*/
-	background-color: #56A7A7;
+	background-color:  #EEEEEE;
+	color: #222831;
 } 
 
 #tabLeft .tab-content{
 	/*background-color: #56A7A7;*/
 	height: 700px;
+	padding: 15px;
 }
 
 .make_drinks_size label{
 	width: 98px;
+	padding:15px;
+	font-size: 18px;
+	margin-bottom: 7px;
 }
 
 .make_drinks_tea_base label{
 	width: 145px;
+	padding:17px;
+	font-size: 16px;
+	margin-bottom: 7px;
+	margin-left: 4px;
 }
 
 .make_drinks_flavor label{
 	width: 110px;
+	padding: 11px;
+	margin:2px 5px 5px 0;
 }
+
+.make_drinks_topping label{
+	min-width: 131px;
+	padding: 10px;
+	margin: 1px 5px 5px 0;
+}
+
+.make_drinks_sweet label{
+	width: 75px;
+	margin-bottom: 5px;
+}
+
+.make_drinks_ice label{
+	width: 114px;
+}
+
+
+
+
 
 
 .btn-info.active,
