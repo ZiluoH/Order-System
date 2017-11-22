@@ -39,45 +39,63 @@ body{
 
 #tabLeft .tab-content{
 	/*background-color: #56A7A7;*/
-	height: 700px;
-	padding: 15px;
+	height: 713px;
+	padding: 10px;
+}
+
+/*make drinks*/
+#make_drinks{
+	position: relative;
 }
 
 .make_drinks_size label{
 	width: 98px;
 	padding:15px;
 	font-size: 18px;
-	margin-bottom: 7px;
+	margin-bottom: 9px;
 }
 
 .make_drinks_tea_base label{
 	width: 145px;
 	padding:17px;
 	font-size: 16px;
-	margin-bottom: 7px;
-	margin-left: 4px;
+	margin-bottom: 9px;
+	margin-left: 6px;
 }
 
 .make_drinks_flavor label{
 	width: 110px;
 	padding: 11px;
-	margin:2px 5px 5px 0;
+	font-size: 16px;
+	margin:2px 11px 9px 0;
 }
 
 .make_drinks_topping label{
 	min-width: 131px;
 	padding: 10px;
-	margin: 1px 5px 5px 0;
+	font-size: 16px;
+	margin: 1px 13px 9px 0;
 }
 
 .make_drinks_sweet label{
 	width: 75px;
-	margin-bottom: 5px;
+	font-size: 16px;
+	margin: 1px 10px 9px 0;
 }
 
 .make_drinks_ice label{
+	font-size: 16px;
 	width: 114px;
+	margin: 1px 10px 0 0;
 }
+
+#add_make_drinks{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 18px;
+}
+
 
 
 
@@ -106,4 +124,8 @@ body{
 	height: 768px;
 	width: 25%;
 	/*background-color: blue;*/
+}
+
+#items_list{
+	font-size: 12px;
 }
