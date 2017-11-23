@@ -135,7 +135,7 @@ function addItem() {
 
 	// add drinks
 	var items_list = document.getElementById('items_list')
-	items_list.innerHTML += '<li class="list-group-item">' + make_drinks_final + '</li>';
+	items_list.innerHTML += '<li class="list-group-item"><div class="remove_item"><i class="fa fa-trash-o" aria-hidden="true"></i></div><p>' + make_drinks_final + '</p></li>';
  	
 }
 

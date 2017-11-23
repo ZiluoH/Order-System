@@ -129,3 +129,17 @@ body{
 #items_list{
 	font-size: 12px;
 }
+
+#items_list .list-group-item{
+	padding: 6px;
+}
+
+#items_list .remove_item{
+	position: absolute;
+	font-size: 33px;
+	top: 0;
+}
+
+#items_list p{
+	margin: 0 0 0 35px;
+}
