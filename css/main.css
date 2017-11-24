@@ -123,7 +123,10 @@ body{
 	float: right;
 	height: 768px;
 	width: 25%;
-	/*background-color: blue;*/
+}
+
+#tabRight h3{
+	text-align: center;
 }
 
 #items_list{
@@ -137,7 +140,8 @@ body{
 #items_list .remove_item{
 	position: absolute;
 	font-size: 33px;
-	top: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #items_list p{

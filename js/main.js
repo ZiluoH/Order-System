@@ -137,8 +137,16 @@ function addItem() {
 	var items_list = document.getElementById('items_list')
 	items_list.innerHTML += '<li class="list-group-item"><div class="remove_item"><i class="fa fa-trash-o" aria-hidden="true"></i></div><p>' + make_drinks_final + '</p></li>';
  	
+	// remove item
+ 	$(document).ready(function () {
+		$('.remove_item').click(function(){
+			$(this).closest('li').remove();
+		})
+	})
 }
 
 function add(a, b){
 	return a + b;
 }
+
+
