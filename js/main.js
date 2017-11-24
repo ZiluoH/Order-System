@@ -105,9 +105,18 @@ for (var i = toppingArray.length - 1; i >= 0; i--) {
 
 
 // JS for frontend
+var total_value = 0;
+document.getElementById('total_value').textContent = total_value
+
+
 function addItem() {
 	// get size
 	var make_drinks_size = document.querySelector('input[name="size"]:checked').value;
+	var make_drinks_size_price = 3.5;
+	if (make_drinks_size === 'Large') {
+		make_drinks_size_price = 4.1;
+	}
+
 	// get tea base
 	var make_drinks_tea_base = document.querySelector('input[name="tea_base"]:checked').value;
 	// get flavor
@@ -131,7 +140,7 @@ function addItem() {
 	var make_drinks_final = make_drinks_size + " " + make_drinks_tea_base + " " + make_drinks_flavor + " flavor with " + 
 			make_drinks_topping_type + " " +  make_drinks_sweet + " sweet and " + make_drinks_ice	
 	
-	console.log(make_drinks_topping_total_price)
+
 
 	// add drinks
 	var items_list = document.getElementById('items_list')
@@ -143,6 +152,12 @@ function addItem() {
 			$(this).closest('li').remove();
 		})
 	})
+
+
+
+ 	total_value = (+total_value + +make_drinks_topping_total_price + +make_drinks_size_price).toFixed(2)
+ 	console.log(total_value)
+ 	document.getElementById('total_value').textContent = total_value
 }
 
 function add(a, b){

@@ -123,6 +123,7 @@ body{
 	float: right;
 	height: 768px;
 	width: 25%;
+	overflow: hidden;
 }
 
 #tabRight h3{
@@ -131,6 +132,8 @@ body{
 
 #items_list{
 	font-size: 12px;
+	overflow: scroll;
+	max-height: 665px;
 }
 
 #items_list .list-group-item{
@@ -146,4 +149,11 @@ body{
 
 #items_list p{
 	margin: 0 0 0 35px;
+}
+
+#total_btn{
+	position: absolute;
+	width: inherit;
+	bottom: 0;
+	font-size: 22px;
 }
